@@ -9,7 +9,6 @@ import {
   Bell,
   ChefHat,
   ChevronDown,
-  ChevronUp,
   Grid2X2,
   LayoutDashboard,
   LogOut,
@@ -44,15 +43,13 @@ const titles: Record<string, string> = {
   "/dashboard/insights": "Insights",
 };
 
-type ProfileAnchor = "sidebar" | "header";
-
 export function DashboardShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const [user, ready] = useSession();
   const [requests] = useServiceRequests();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [profileOpen, setProfileOpen] = useState<ProfileAnchor | null>(null);
+  const [profileOpen, setProfileOpen] = useState(false);
   const [now, setNow] = useState<string>("");
 
   useEffect(() => {
@@ -61,7 +58,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMenuOpen(false);
-    setProfileOpen(null);
+    setProfileOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -76,7 +73,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!profileOpen) return;
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setProfileOpen(null);
+      if (event.key === "Escape") setProfileOpen(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -126,9 +123,6 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
     signOut();
     router.push("/login");
   };
-
-  const openProfile = (anchor: ProfileAnchor) =>
-    setProfileOpen((current) => (current === anchor ? null : anchor));
 
   return (
     <div className="hide-scroll min-h-screen bg-sand">
@@ -226,26 +220,11 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
         <div className="mt-3 border-t border-line p-3">
           <button
             type="button"
-            onClick={() => openProfile("sidebar")}
-            aria-haspopup="menu"
-            aria-expanded={profileOpen === "sidebar"}
-            className="flex w-full items-center gap-2.5 rounded-[16px] px-1.5 py-1.5 text-left transition-colors hover:bg-sand"
+            onClick={logOut}
+            className="flex w-full items-center gap-2.5 rounded-full px-3 py-2.5 text-left text-[12px] font-medium text-forest/60 transition-colors hover:bg-sand hover:text-forest"
           >
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-forest text-[9px] font-semibold text-cream">
-              {initials}
-            </span>
-            <span className="min-w-0 flex-1">
-              <span className="block truncate text-[12px] font-semibold text-forest">
-                {user.name}
-              </span>
-              <span className="mt-0.5 block text-[9px] text-muted">{user.role}</span>
-            </span>
-            <ChevronUp
-              className={cn(
-                "h-3.5 w-3.5 text-muted/60 transition-transform",
-                profileOpen === "sidebar" && "rotate-180",
-              )}
-            />
+            <LogOut className="h-4 w-4 text-forest/45" />
+            Log out
           </button>
         </div>
       </aside>
@@ -296,9 +275,9 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
               </Link>
               <button
                 type="button"
-                onClick={() => openProfile("header")}
+                onClick={() => setProfileOpen((current) => !current)}
                 aria-haspopup="menu"
-                aria-expanded={profileOpen === "header"}
+                aria-expanded={profileOpen}
                 aria-label="Account menu"
                 className="flex h-9 items-center gap-1.5 rounded-full border border-line bg-white pl-1 pr-2.5 text-forest transition-colors hover:border-forest/25"
               >
@@ -308,7 +287,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
                 <ChevronDown
                   className={cn(
                     "h-3 w-3 text-muted transition-transform",
-                    profileOpen === "header" && "rotate-180",
+                    profileOpen && "rotate-180",
                   )}
                 />
               </button>
@@ -329,18 +308,13 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
           <button
             type="button"
             aria-label="Close account menu"
-            onClick={() => setProfileOpen(null)}
+            onClick={() => setProfileOpen(false)}
             className="fixed inset-0 z-[55] cursor-default"
           />
           <div
             role="menu"
             aria-label="Account menu"
-            className={cn(
-              "fixed z-[60] rounded-[22px] border border-line bg-white p-2 shadow-plate",
-              profileOpen === "sidebar"
-                ? "bottom-[78px] left-3 w-[226px]"
-                : "right-4 top-[74px] w-[268px] sm:right-6 lg:right-8",
-            )}
+            className="fixed right-4 top-[74px] z-[60] w-[268px] rounded-[22px] border border-line bg-white p-2 shadow-plate sm:right-6 lg:right-8"
           >
             <div className="flex items-start gap-3 border-b border-line px-3 pb-3 pt-2">
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-pink text-[10px] font-semibold text-forest">
@@ -358,7 +332,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
             <div className="mt-1.5 grid gap-0.5">
               <Link
                 href="/order/table-12"
-                onClick={() => setProfileOpen(null)}
+                onClick={() => setProfileOpen(false)}
                 className="flex items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[12px] font-medium text-forest transition-colors hover:bg-sand"
               >
                 <QrCode className="h-4 w-4 text-forest/45" />
@@ -369,7 +343,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
               </Link>
               <Link
                 href="/"
-                onClick={() => setProfileOpen(null)}
+                onClick={() => setProfileOpen(false)}
                 className="flex items-center gap-2.5 rounded-[12px] px-3 py-2.5 text-[12px] font-medium text-forest transition-colors hover:bg-sand"
               >
                 <ArrowUpRight className="h-4 w-4 text-forest/45" />
