@@ -32,7 +32,7 @@ import { restaurant } from "@/features/menu/data";
 
 const slides = [
   {
-    eyebrow: "QR ordering / table service",
+    eyebrow: "Sideplate / QR ordering",
     title: "Your website",
     accent: "on every table.",
     copy: "The guest scans once. The menu opens, the order reaches the pass and the bill stays shared. No app, no account, no waving across the room.",
@@ -1215,10 +1215,10 @@ export function Faq() {
             The short answers. The longer ones are a conversation with the team.
           </p>
           <a
-            href="mailto:hello@qr.ng"
+            href="mailto:hello@sideplate.online"
             className="mt-4 inline-flex items-center gap-1.5 text-[12px] font-semibold text-forest underline underline-offset-4"
           >
-            hello@qr.ng
+            hello@sideplate.online
             <ArrowUpRight className="h-3 w-3" />
           </a>
         </Reveal>

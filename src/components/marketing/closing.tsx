@@ -75,10 +75,10 @@ export function Closing() {
               The short answers. The longer ones are a conversation with the team.
             </p>
             <a
-              href="mailto:hello@qr.ng"
+              href="mailto:hello@sideplate.online"
               className="mt-4 inline-flex items-center gap-1.5 text-[11px] font-semibold text-forest transition-colors hover:text-tomato"
             >
-              hello@qr.ng
+              hello@sideplate.online
               <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
           </Reveal>

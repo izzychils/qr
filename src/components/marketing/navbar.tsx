@@ -6,10 +6,12 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 
 const links = [
-  { label: "For restaurants", href: "/#product" },
+  { label: "Products", href: "/products" },
   { label: "How it works", href: "/#how" },
   { label: "For guests", href: "/order/table-12" },
-  { label: "AI", href: "/#ai" },
+  { label: "Scan a code", href: "/scan" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
   { label: "Pricing", href: "/pricing" },
 ];
 

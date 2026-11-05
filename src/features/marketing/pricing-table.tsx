@@ -62,7 +62,7 @@ const plans = [
     ],
     muted: [],
     cta: "Talk to the team",
-    href: "mailto:hello@qr.ng",
+    href: "mailto:hello@sideplate.online",
     highlight: false,
   },
 ];

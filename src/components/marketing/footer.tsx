@@ -1,33 +1,36 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
+import { site } from "@/lib/site";
 
 const columns = [
   {
     title: "Product",
     links: [
-      { label: "QR ordering", href: "/#product" },
-      { label: "Kitchen display", href: "/#product" },
+      { label: "Everything included", href: "/products" },
+      { label: "QR ordering", href: "/products" },
+      { label: "Kitchen display", href: "/products" },
       { label: "Guest experience", href: "/order/table-12" },
+      { label: "Scan a table code", href: "/scan" },
       { label: "Pricing", href: "/pricing" },
     ],
   },
   {
-    title: "Restaurant",
+    title: "Company",
     links: [
+      { label: "About", href: "/about" },
+      { label: "Products", href: "/products" },
+      { label: "Contact", href: "/contact" },
       { label: "Staff sign in", href: "/login" },
-      { label: "Service overview", href: "/login" },
-      { label: "Table 12 demo", href: "/order/table-12" },
-      { label: "Order status", href: "/order/table-12/status" },
     ],
   },
   {
     title: "The fine print",
     links: [
+      { label: "Privacy Policy", href: "/privacy" },
+      { label: "Terms of Service", href: "/terms" },
       { label: "Payments", href: "/#payments" },
-      { label: "The AI rule", href: "/#ai" },
       { label: "Common questions", href: "/#faq" },
-      { label: "Privacy", href: "/#faq" },
     ],
   },
 ];
@@ -50,6 +53,18 @@ export function Footer() {
               Try the guest menu
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
+            <p className="mt-5 text-[10.5px] leading-relaxed text-muted/70">
+              {site.companyLine}
+              <br />
+              <a
+                href={`mailto:${site.email}`}
+                className="text-forest/70 transition-colors hover:text-forest"
+              >
+                {site.email}
+              </a>
+              <br />
+              {site.location}
+            </p>
           </div>
 
           {columns.map((column) => (
@@ -74,12 +89,22 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 py-5 text-[10.5px] text-muted/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 QR / Frontend demo</p>
-          <p>Ember &amp; Rice, Lekki / Built for the room</p>
+          <p>
+            © {new Date().getFullYear()} {site.company}. {site.name} is a product of {site.company}.
+          </p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link href="/privacy" className="transition-colors hover:text-forest">
+              Privacy
+            </Link>
+            <Link href="/terms" className="transition-colors hover:text-forest">
+              Terms
+            </Link>
+            <span>{site.domain}</span>
+          </div>
         </div>
 
-        <p className="pointer-events-none select-none overflow-hidden pb-2 text-center text-[clamp(7rem,29vw,22rem)] font-extrabold leading-[0.72] tracking-[-0.09em] text-[#f0f0f0]">
-          QR
+        <p className="pointer-events-none select-none overflow-hidden pb-2 text-center text-[clamp(3.4rem,20vw,15rem)] font-extrabold leading-[0.72] tracking-[-0.06em] text-[#f0f0f0]">
+          {site.name}
         </p>
       </div>
     </footer>

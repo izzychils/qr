@@ -1,7 +1,9 @@
 import Image from "next/image";
+import { QRCodeSVG } from "qrcode.react";
 import { Check, Clock3, QrCode, ScanLine } from "lucide-react";
 import { ActionButton } from "@/components/ui/action-button";
 import { QrMark } from "@/components/ui/qr-mark";
+import { site } from "@/lib/site";
 
 const promises = ["No guest app", "Paystack, transfer, USSD", "NFC optional"];
 
@@ -23,7 +25,7 @@ export function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8">
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <span className="eyebrow text-cream/55">QR ordering / table service</span>
+              <span className="eyebrow text-cream/55">Sideplate / QR ordering</span>
               <span className="hidden h-3 w-px bg-cream/15 sm:block" />
               <span className="font-mono text-[8.5px] uppercase tracking-[0.13em] text-cream/30">
                 Built for restaurants, not apps
@@ -187,8 +189,16 @@ export function Hero() {
                   <span className="font-mono text-[5.5px] uppercase tracking-[0.1em]">Table 12</span>
                   <ScanLine className="h-2.5 w-2.5" />
                 </div>
-                <div className="mt-1.5 bg-cream p-1.5">
-                  <QrMark className="h-full w-full" title="Scan table 12" />
+                <div className="mt-1.5 flex justify-center bg-cream p-1.5">
+                  <QRCodeSVG
+                    value={`${site.url}/order/table-12`}
+                    size={72}
+                    level="M"
+                    marginSize={0}
+                    bgColor="#fffaf0"
+                    fgColor="#0b0b0b"
+                    title="Scan the table 12 menu"
+                  />
                 </div>
                 <p className="mt-1 text-center font-mono text-[5px] uppercase tracking-[0.1em]">
                   Scan to order

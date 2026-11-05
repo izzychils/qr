@@ -16,12 +16,13 @@ const sans = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "QR | Your website on every table",
-    template: "%s | QR",
+    default: "Sideplate | Your website on every table",
+    template: "%s | Sideplate",
   },
   description:
-    "QR turns every restaurant table into a digital waiter: QR ordering, shared bills, a live kitchen display and one intelligent dashboard for the whole service.",
+    "Sideplate turns every restaurant table into a digital waiter: QR ordering, shared bills, a live kitchen display and one calm dashboard for the whole service.",
   keywords: [
+    "Sideplate",
     "QR ordering",
     "restaurant ordering",
     "table management",
@@ -30,9 +31,9 @@ export const metadata: Metadata = {
     "Nigerian restaurants",
   ],
   openGraph: {
-    title: "QR | Your website on every table",
+    title: "Sideplate | Your website on every table",
     description:
-      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system.",
+      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system. Sideplate is a product of Ivents.",
     type: "website",
   },
 };

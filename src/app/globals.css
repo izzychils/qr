@@ -335,6 +335,29 @@
   }
 }
 
+/* The camera preview is injected by html5-qrcode; keep it inside the frame. */
+.qr-reader {
+  position: relative;
+  background: #0b0b0b;
+}
+
+.qr-reader video {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: cover;
+  display: block;
+}
+
+.qr-reader canvas {
+  max-width: 100%;
+}
+
+.qr-reader #qr-shaded-region {
+  border-width: 0 !important;
+  box-shadow: none !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

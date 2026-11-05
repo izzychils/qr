@@ -13,7 +13,7 @@ export function Logo({
   return (
     <Link
       href={href}
-      aria-label="QR home"
+      aria-label="Sideplate home"
       className={cn(
         "group inline-flex items-baseline gap-1 leading-none transition-opacity hover:opacity-70",
         className,
@@ -21,11 +21,11 @@ export function Logo({
     >
       <span
         className={cn(
-          "font-serif text-[27px] font-extrabold leading-none tracking-[-0.08em]",
+          "font-serif text-[23px] font-extrabold leading-none tracking-[-0.06em]",
           tone === "dark" ? "text-cream" : "text-forest",
         )}
       >
-        QR
+        Sideplate
       </span>
       <span className="mb-[3px] h-[6px] w-[6px] rounded-full bg-tomato transition-transform duration-300 group-hover:scale-125" />
     </Link>

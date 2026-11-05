@@ -8,8 +8,9 @@ import {
   Star,
   TrendingUp,
 } from "lucide-react";
-import { QrMark } from "@/components/ui/qr-mark";
+import { QRCodeSVG } from "qrcode.react";
 import { Reveal } from "@/components/ui/reveal";
+import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const floor = [
@@ -221,7 +222,17 @@ export function Product() {
                     key={table}
                     className="rounded-[5px] border border-line bg-white p-1.5 text-center"
                   >
-                    <QrMark className="mx-auto h-9 w-9 text-forest" title={`Table ${table} code`} />
+                    <div className="flex justify-center">
+                      <QRCodeSVG
+                        value={`${site.url}/order/table-${table}`}
+                        size={36}
+                        level="M"
+                        marginSize={0}
+                        bgColor="#ffffff"
+                        fgColor="#0b0b0b"
+                        title={`QR code for table ${table}`}
+                      />
+                    </div>
                     <p className="mt-1 font-mono text-[6px] uppercase tracking-[0.08em] text-muted">
                       T{table}
                     </p>
