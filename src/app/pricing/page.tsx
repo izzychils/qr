@@ -150,7 +150,7 @@ export default function PricingPage() {
                 <ActionButton href="/order/table-12" variant="forest" size="md">
                   Open the demo
                 </ActionButton>
-                <ActionButton href="/#faq" variant="outline" size="md">
+                <ActionButton href="/faq" variant="outline" size="md">
                   Common questions
                 </ActionButton>
               </div>

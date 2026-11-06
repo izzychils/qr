@@ -18,7 +18,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen overflow-x-clip">
       <a
-        href="#main-content"
+        href="/main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-forest focus:px-4 focus:py-2 text-[12px] font-semibold text-cream"
       >
         Skip to content

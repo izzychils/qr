@@ -239,7 +239,7 @@ export function OrderExperience({ table }: { table: number }) {
               </div>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                <ActionButton href="#menu" variant="forest" size="md">
+                <ActionButton href="/menu" variant="forest" size="md">
                   Browse the menu
                 </ActionButton>
                 <ActionButton
