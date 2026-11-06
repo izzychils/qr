@@ -21,6 +21,7 @@ const columns = [
       { label: "About", href: "/about" },
       { label: "Products", href: "/products" },
       { label: "Contact", href: "/contact" },
+      { label: "Company Verification", href: "/verify" },
       { label: "Staff sign in", href: "/login" },
     ],
   },
@@ -29,8 +30,8 @@ const columns = [
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
-      { label: "Payments", href: "/#payments" },
-      { label: "Common questions", href: "/#faq" },
+      { label: "Payments", href: "/payments" },
+      { label: "Common questions", href: "/faq" },
     ],
   },
 ];
