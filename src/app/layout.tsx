@@ -15,12 +15,17 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sideplate.online"),
   title: {
     default: "Sideplate | Your website on every table",
     template: "%s | Sideplate",
   },
   description:
     "Sideplate turns every restaurant table into a digital waiter: QR ordering, shared bills, a live kitchen display and one calm dashboard for the whole service.",
+  icons: {
+    icon: "/qr-logo.png",
+    apple: "/qr-logo.png",
+  },
   keywords: [
     "Sideplate",
     "QR ordering",
