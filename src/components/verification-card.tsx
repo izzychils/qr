@@ -15,10 +15,10 @@ interface CompanyRecord {
   country: string;
 }
 
-// Official Sideplate company records
+// Official company records
 const companyDatabase: CompanyRecord[] = [
   {
-    registrationId: "HC-456882",
+    registrationId: "456882",
     companyName: "Hallcraft",
     website: "hallcraft.online",
     status: "Verified",
@@ -30,7 +30,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "FV-738291",
+    registrationId: "738291",
     companyName: "Folivio",
     website: "folivio.online",
     status: "Verified",
@@ -42,7 +42,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "ES-924567",
+    registrationId: "924567",
     companyName: "Eduschol",
     website: "eduschol.online",
     status: "Verified",
@@ -54,7 +54,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "JV-582341",
+    registrationId: "582341",
     companyName: "JOVO",
     website: "jovo.ng",
     status: "Verified",
@@ -66,7 +66,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "LL-673148",
+    registrationId: "673148",
     companyName: "Learning Lab",
     website: "learninglab.online",
     status: "Verified",
@@ -78,7 +78,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "SP-819423",
+    registrationId: "819423",
     companyName: "Sideplate",
     website: "sideplate.online",
     status: "Verified",
@@ -90,7 +90,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "SQ-345789",
+    registrationId: "345789",
     companyName: "Stoq",
     website: "stoq.online",
     status: "Verified",
@@ -102,7 +102,7 @@ const companyDatabase: CompanyRecord[] = [
     country: "Nigeria",
   },
   {
-    registrationId: "PQ-761234",
+    registrationId: "761234",
     companyName: "Pharmiq",
     website: "pharmiq.online",
     status: "Verified",
@@ -179,7 +179,7 @@ export function VerificationCard() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <input
             type="text"
-            placeholder="e.g., SP-819423"
+            placeholder="e.g., 819423"
             value={regIdValue}
             onChange={(e) => setRegIdValue(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleVerify()}
@@ -372,13 +372,13 @@ export function VerificationCard() {
         </p>
         <button
           onClick={() => {
-            setRegIdValue("SP-819423");
+            setRegIdValue("819423");
             setResult(null);
             setNotFound(false);
           }}
           className="rounded-lg border border-line bg-card px-4 py-2 font-mono text-[12.5px] font-semibold text-forest transition-all hover:bg-surface"
         >
-          SP-819423
+          819423
         </button>
       </div>
     </div>
