@@ -21,7 +21,7 @@ const columns = [
       { label: "About", href: "/about" },
       { label: "Products", href: "/products" },
       { label: "Contact", href: "/contact" },
-      { label: "Company Verification", href: "/verify" },
+      // { label: "Company Verification", href: "/verify" },
       { label: "Staff sign in", href: "/login" },
     ],
   },
@@ -55,8 +55,8 @@ export function Footer() {
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
             <p className="mt-5 text-[10.5px] leading-relaxed text-muted/70">
-              {site.companyLine}
-              <br />
+              {/* {site.companyLine}
+              <br /> */}
               <a
                 href={`mailto:${site.email}`}
                 className="text-forest/70 transition-colors hover:text-forest"
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-2 py-5 text-[10.5px] text-muted/60 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.company}. {site.name} is a product of {site.company}.
+            © {new Date().getFullYear()} {site.company}. {/* {site.name} is a product of {site.company}. */}
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
             <Link href="/privacy" className="transition-colors hover:text-forest">

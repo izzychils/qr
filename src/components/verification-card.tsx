@@ -15,16 +15,100 @@ interface CompanyRecord {
   country: string;
 }
 
-// Official Sideplate/Ivents company record
+// Official Sideplate company records
 const companyDatabase: CompanyRecord[] = [
   {
-    registrationId: "SP-2026-00001",
-    companyName: "Ivents",
+    registrationId: "HC-456882",
+    companyName: "Hallcraft",
+    website: "hallcraft.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Design & Collaboration Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "FV-738291",
+    companyName: "Folivio",
+    website: "folivio.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Career Intelligence Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "ES-924567",
+    companyName: "Eduschol",
+    website: "eduschol.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Education Management Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "JV-582341",
+    companyName: "JOVO",
+    website: "jovo.ng",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Campus Marketplace Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "LL-673148",
+    companyName: "Learning Lab",
+    website: "learninglab.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Interactive Science Education Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "SP-819423",
+    companyName: "Sideplate",
     website: "sideplate.online",
     status: "Verified",
     registrationDate: "2026-01-10",
     expiryDate: "2029-01-09",
     planType: "Restaurant QR Ordering Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "SQ-345789",
+    companyName: "Stoq",
+    website: "stoq.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Inventory Management Platform",
+    securityCompliance: "ISO 27001 & SOC 2 Type II",
+    headquarters: "Lagos",
+    country: "Nigeria",
+  },
+  {
+    registrationId: "PQ-761234",
+    companyName: "Pharmiq",
+    website: "pharmiq.online",
+    status: "Verified",
+    registrationDate: "2026-01-10",
+    expiryDate: "2029-01-09",
+    planType: "Pharmacy Management Platform",
     securityCompliance: "ISO 27001 & SOC 2 Type II",
     headquarters: "Lagos",
     country: "Nigeria",
@@ -90,12 +174,12 @@ export function VerificationCard() {
       {/* Search Input */}
       <div className="card-paper p-6 sm:p-8">
         <label className="mb-3 block text-[12.5px] font-medium text-forest">
-          Enter Sideplate Registration ID
+          Enter Company Registration ID
         </label>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
           <input
             type="text"
-            placeholder="e.g., SP-2026-00001"
+            placeholder="e.g., SP-819423"
             value={regIdValue}
             onChange={(e) => setRegIdValue(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleVerify()}
@@ -284,17 +368,17 @@ export function VerificationCard() {
       {/* Quick Demo Info */}
       <div className="mt-6 rounded-xl border border-pink/20 bg-pink/5 p-5 text-center">
         <p className="mb-3 text-[12px] text-muted">
-          Official Sideplate Registration ID:
+          Try a sample Registration ID:
         </p>
         <button
           onClick={() => {
-            setRegIdValue("SP-2026-00001");
+            setRegIdValue("SP-819423");
             setResult(null);
             setNotFound(false);
           }}
           className="rounded-lg border border-line bg-card px-4 py-2 font-mono text-[12.5px] font-semibold text-forest transition-all hover:bg-surface"
         >
-          SP-2026-00001
+          SP-819423
         </button>
       </div>
     </div>
