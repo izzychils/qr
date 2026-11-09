@@ -6,7 +6,7 @@ import { PageShell, Section, Bullets } from "@/components/marketing/page-shell";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Sideplate is restaurant software from Ivents: the menu, the order, the receipt and the bill on every table.",
+    "Sideplate is restaurant software: the menu, the order, the receipt and the bill on every table.", // "Sideplate is restaurant software from Ivents: the menu, the order, the receipt and the bill on every table.",
 };
 
 export default function AboutPage() {
@@ -56,7 +56,7 @@ export default function AboutPage() {
           your browser; no payment is ever taken and no kitchen is actually watching.
         </p>
         <p>
-          Sideplate is a product of {site.company}. For anything commercial, or to talk through a
+          {/* Sideplate is a product of {site.company}. */} For anything commercial, or to talk through a
           real deployment, write to{" "}
           <a
             className="font-semibold text-forest underline decoration-tomato/40 underline-offset-2 hover:decoration-tomato"

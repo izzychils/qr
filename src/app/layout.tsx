@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sideplate | Your website on every table",
     description:
-      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system. Sideplate is a product of Ivents.",
+      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system.", // "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system. Sideplate is a product of Ivents.",
     type: "website",
   },
 };

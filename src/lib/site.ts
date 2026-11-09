@@ -10,8 +10,8 @@ export const site = {
   tagline: "Your website on every table",
   description:
     "Sideplate turns every restaurant table into a digital waiter: QR ordering, shared bills, a live kitchen display and one calm dashboard for the whole service.",
-  company: "Ivents",
-  companyLine: "Sideplate is a product of Ivents.",
+  company: "Sideplate", // "Ivents",
+  companyLine: "Sideplate", // "Sideplate is a product of Ivents.",
   email: "hello@sideplate.online",
   location: "Lagos, Nigeria",
   lastUpdated: "4 November 2026",
