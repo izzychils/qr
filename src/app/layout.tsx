@@ -35,12 +35,86 @@ export const metadata: Metadata = {
     "restaurant dashboard",
     "Nigerian restaurants",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "Restaurant software",
+  authors: [{ name: "Sideplate" }],
+  creator: "Sideplate",
+  publisher: "Sideplate",
+  applicationName: "Sideplate",
   openGraph: {
     title: "Sideplate | Your website on every table",
     description:
-      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system.", // "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system. Sideplate is a product of Ivents.",
+      "QR ordering, table service, kitchen operations and restaurant intelligence in one calm system.",
+    url: "https://sideplate.online",
+    siteName: "Sideplate",
+    locale: "en_NG",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sideplate — your website on every table",
+    description:
+      "QR ordering, shared bills, a live kitchen display and one calm dashboard for the whole service.",
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://sideplate.online/#organization",
+      name: "Sideplate",
+      url: "https://sideplate.online",
+      email: "hello@sideplate.online",
+      description:
+        "Sideplate turns every restaurant table into a digital waiter: QR ordering, shared bills, a live kitchen display and one dashboard for the whole service.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Lagos",
+        addressCountry: "NG",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://sideplate.online/#website",
+      url: "https://sideplate.online",
+      name: "Sideplate",
+      publisher: { "@id": "https://sideplate.online/#organization" },
+      inLanguage: "en",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Sideplate",
+      applicationCategory: "BusinessApplication",
+      applicationSubCategory: "Restaurant ordering and kitchen management",
+      operatingSystem: "Web browser",
+      url: "https://sideplate.online",
+      description:
+        "QR menu and table ordering, shared bills, a kitchen display system, table management and service insights for restaurants.",
+      featureList: [
+        "QR menu and ordering",
+        "Table management",
+        "Shared bills and checkout",
+        "Live kitchen display",
+        "Menu management",
+        "Service insights",
+      ],
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -55,7 +129,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
