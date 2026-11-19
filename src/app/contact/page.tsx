@@ -5,7 +5,7 @@ import { PageShell, Section } from "@/components/marketing/page-shell";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Talk to ${site.company} about Sideplate — demos, pricing, printed table cards or a real deployment.`,
+  description: `Talk to ${site.company} about Sideplate - demos, pricing, printed table cards or a real deployment.`,
 };
 
 export default function ContactPage() {

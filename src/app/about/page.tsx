@@ -45,7 +45,7 @@ export default function AboutPage() {
         <p>
           Sideplate is built local-first for Nigerian service: Naira pricing, Paystack-first
           payments, transfer and USSD support, and a menu that works on a cheap phone over a
-          weak connection. The AI layer proposes, it never invents — every suggestion sits in
+          weak connection. The AI layer proposes, it never invents - every suggestion sits in
           front of a person who can accept or ignore it.
         </p>
       </Section>
@@ -75,7 +75,7 @@ export default function AboutPage() {
         >
           Contact the team
         </Link>{" "}
-        — or{" "}
+        - or{" "}
         <Link
           href="/products"
           className="font-semibold text-forest underline decoration-tomato/40 underline-offset-2 hover:decoration-tomato"

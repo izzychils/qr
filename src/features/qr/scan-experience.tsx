@@ -97,7 +97,7 @@ export function ScanExperience() {
               </h1>
               <p className="mt-4 max-w-[440px] text-[13px] leading-[1.75] text-cream/55">
                 Every Sideplate table has a real QR code. Scan one with your phone camera, or
-                test the flow right here with the demo code — no camera required.
+                test the flow right here with the demo code - no camera required.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-cream/10 pt-4 text-[10.5px] text-cream/45">
                 {["No app to install", "Processed on your device", "Real, scannable codes"].map(

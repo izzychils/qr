@@ -41,7 +41,7 @@ export default function ProductsPage() {
   return (
     <PageShell
       eyebrow="Products / one system, three surfaces"
-      title="The menu, the pass and the front desk — on the same order."
+      title="The menu, the pass and the front desk - on the same order."
       intro="Sideplate is one product made of three surfaces that read the same data. Pick the one you are responsible for; the others already agree with it."
       meta={`${site.companyLine} Pricing starts with a free demo.`}
     >

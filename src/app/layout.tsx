@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sideplate — your website on every table",
+    title: "Sideplate: your website on every table",
     description:
       "QR ordering, shared bills, a live kitchen display and one calm dashboard for the whole service.",
   },
